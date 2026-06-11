@@ -1,10 +1,3 @@
-/*
-Q4 - BFS for cyber incident analysis
-bash
-
-cat > /home/claude/q4_bfs.c << 'EOF'
-
-*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -117,37 +110,3 @@ int main() {
 
     return 0;
 }
-
-/*
-EOF
-gcc -o /home/claude/q4 /home/claude/q4_bfs.c && echo "WS1" | /home/claude/q4
-Output
-
-=== QUESTION 4: Cyber Incident BFS Analysis ===
-
-Enterprise Communication Graph:
-  WS1 <-> WS2: 8 min
-  WS1 <-> WS3: 15 min
-  WS1 <-> WS4: 5 min
-  WS2 <-> WS5: 12 min
-  WS3 <-> WS5: 7 min
-  WS3 <-> WS6: 9 min
-  WS4 <-> WS6: 11 min
-  WS5 <-> WS7: 6 min
-  WS6 <-> WS7: 14 min
-
-Enter suspected compromised workstation (e.g., WS1, WS2, ...WS7): 
-BFS traversal from WS1:
-  Visiting: WS1 (Source / Suspected Breach Point)
-
-Direct Neighbors (One-Hop Contacts) of WS1:
-  Node     | Transfer Time (min)
-  ---------|--------------------
-  WS2      | 8 min
-  WS3      | 15 min
-  WS4      | 5 min
-
-Highest Risk Contact Analysis:
-  => WS3 has the highest data transfer time: 15 minutes
-  => This workstation is at HIGHEST RISK of exposure and data breach propagation.
-*/

@@ -1,9 +1,3 @@
-/*
-Q2 - Airport security max-heap
-bash
-
-cat > /home/claude/q2_airport.c << 'EOF'
-*/
 #include <stdio.h>
 #include <string.h>
 
@@ -144,55 +138,3 @@ int main() {
 
     return 0;
 }
-/*
-EOF
-gcc -o /home/claude/q2 /home/claude/q2_airport.c && /home/claude/q2
-Output
-
-=== QUESTION 2: Smart Airport Security - Max-Heap Priority Queue ===
-
-Passengers and Risk Scores:
-  Alice: 72
-  Brian: 55
-  Chen: 88
-  Fatima: 63
-  Noah: 41
-  Sofia: 79
-
---- Step 1: Initial Binary Tree (before heapify) ---
-Heap Array: [Alice:72] [Brian:55] [Chen:88] [Fatima:63] [Noah:41] [Sofia:79] 
-Tree structure:
-Level 0: [Alice:72] 
-Level 1: [Brian:55] [Chen:88] 
-Level 2: [Fatima:63] [Noah:41] [Sofia:79] 
-
---- Step 2: After Building Max-Heap ---
-Heap Array: [Chen:88] [Fatima:63] [Sofia:79] [Brian:55] [Noah:41] [Alice:72] 
-Tree structure:
-Level 0: [Chen:88] 
-Level 1: [Fatima:63] [Sofia:79] 
-Level 2: [Brian:55] [Noah:41] [Alice:72] 
-
---- Step 3: Priority Queue Extraction (Screening Order) ---
-Priority Queue - Screening Order (Highest Risk First):
-  1. Chen (Risk Score: 88)
-  2. Sofia (Risk Score: 79)
-  3. Alice (Risk Score: 72)
-  4. Fatima (Risk Score: 63)
-  5. Brian (Risk Score: 55)
-  6. Noah (Risk Score: 41)
-
---- Step 4: Insert New Passenger 'Zara' with Risk Score 98 ---
-Heap Array: [Zara:98] [Fatima:63] [Chen:88] [Brian:55] [Noah:41] [Alice:72] [Sofia:79] 
-Tree structure:
-Level 0: [Zara:98] 
-Level 1: [Fatima:63] [Chen:88] 
-Level 2: [Brian:55] [Noah:41] [Alice:72] [Sofia:79] 
-
---- Step 5: Remove Passenger with Risk Score 98 (Cleared) ---
-Heap Array: [Chen:88] [Fatima:63] [Sofia:79] [Brian:55] [Noah:41] [Alice:72] 
-Tree structure:
-Level 0: [Chen:88] 
-Level 1: [Fatima:63] [Sofia:79] 
-Level 2: [Brian:55] [Noah:41] [Alice:72] 
-*/

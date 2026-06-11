@@ -1,6 +1,3 @@
-//bash
-
-//cat > /home/claude/q5_bellman.c << 'EOF'
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
@@ -109,38 +106,3 @@ int main() {
     return 0;
 }
 
-/*
-EOF
-gcc -o /home/claude/q5 /home/claude/q5_bellman.c && /home/claude/q5
-Output
-
-=== QUESTION 5: Banking Risk Propagation - Bellman-Ford ===
-
-Transaction Network Edges:
-  Branch A -> Branch B : cost/risk = 4
-  Branch A -> Branch D : cost/risk = 16
-  Branch B -> Branch C : cost/risk = 6
-  Branch B -> Branch E : cost/risk = 7
-  Branch C -> Branch G : cost/risk = 9
-  Branch D -> Branch E : cost/risk = 3
-  Branch E -> Branch F : cost/risk = 2
-  Branch F -> Branch C : cost/risk = -3
-  Branch F -> Branch G : cost/risk = 10
-  Branch G -> Branch H : cost/risk = 13
-  Branch D -> Branch H : cost/risk = 20
-
-Note: Negative edge weights indicate exploitable or suspicious routes.
-
-No negative-weight cycles detected. Network is stable.
-
---- Shortest Paths from Branch A ---
-Branch     Min Cost     Path                
-------     --------     ----                
-B          4            A -> B
-C          10           A -> B -> C
-D          16           A -> D
-E          11           A -> B -> E
-F          13           A -> B -> E -> F
-G          19           A -> B -> C -> G
-H          32           A -> B -> C -> G -> H
-*/

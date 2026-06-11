@@ -1,4 +1,3 @@
-// cat > /home/claude/q1_heap.c << 'EOF'
 #include <stdio.h>
 #include <string.h>
 
@@ -122,47 +121,3 @@ int main() {
 
     return 0;
 }
-
-/*
-EOF
-gcc -o /home/claude/q1 /home/claude/q1_heap.c && /home/claude/q1
-Output
-
-=== QUESTION 1: Cloud Job Scheduler - Max-Heap ===
-
-Input array: P = {42, 17, 93, 28, 65, 81, 54, 60, 99, 73, 88}
-Job IDs assigned: A=42, B=17, C=93, D=28, E=65, F=81, G=54, H=60, I=99, J=73, K=88
-
---- Step 1: Initial Binary Tree (before heapify) ---
-Heap Array: [A:42] [B:17] [C:93] [D:28] [E:65] [F:81] [G:54] [H:60] [I:99] [J:73] [K:88] 
-Tree structure (index-based):
-Level 0: [A:42] 
-Level 1: [B:17] [C:93] 
-Level 2: [D:28] [E:65] [F:81] [G:54] 
-Level 3: [H:60] [I:99] [J:73] [K:88] 
-
---- Step 2: After Building Max-Heap ---
-Heap Array: [I:99] [K:88] [C:93] [H:60] [J:73] [F:81] [G:54] [B:17] [D:28] [A:42] [E:65] 
-Tree structure (index-based):
-Level 0: [I:99] 
-Level 1: [K:88] [C:93] 
-Level 2: [H:60] [J:73] [F:81] [G:54] 
-Level 3: [B:17] [D:28] [A:42] [E:65] 
-
---- Step 3: Insert Urgent Job (Priority 100, ID='L') ---
-Heap Array: [L:100] [K:88] [I:99] [H:60] [J:73] [C:93] [G:54] [B:17] [D:28] [A:42] [E:65] [F:81] 
-Tree structure (index-based):
-Level 0: [L:100] 
-Level 1: [K:88] [I:99] 
-Level 2: [H:60] [J:73] [C:93] [G:54] 
-Level 3: [B:17] [D:28] [A:42] [E:65] [F:81] 
-
---- Step 4: Remove Job with Priority 100 (Aborted) ---
-Heap Array: [I:99] [K:88] [C:93] [H:60] [J:73] [F:81] [G:54] [B:17] [D:28] [A:42] [E:65] 
-Tree structure (index-based):
-Level 0: [I:99] 
-Level 1: [K:88] [C:93] 
-Level 2: [H:60] [J:73] [F:81] [G:54] 
-Level 3: [B:17] [D:28] [A:42] [E:65] 
-
-*/
